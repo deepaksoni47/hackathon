@@ -1,15 +1,12 @@
 /* components/Navbar.css */
 
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   background-color: #7f1d1d; /* dark red */
   color: white;
   padding: 1rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 50;
+  
 }
 
 .navbar-container {
