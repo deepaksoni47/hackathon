@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Root theme variables for light/dark support (optional) */
+:root {
+  --primary-color: 59, 130, 246;     /* Tailwind blue-500 */
+  --accent-color: 16, 185, 129;      /* Tailwind emerald-500 */
+  --bg-light: 255, 255, 255;
+  --bg-dark: 17, 24, 39;
+  --text-light: 0, 0, 0;
+  --text-dark: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-light: 17, 24, 39;
+    --text-light: 255, 255, 255;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Base resets and layout */
+* {
+  @apply box-border m-0 p-0;
+}
+
+html, body {
+  @apply w-full h-full scroll-smooth overflow-x-hidden;
+  font-family: 'Inter', sans-serif;
+  background-color: rgb(var(--bg-light));
+  color: rgb(var(--text-light));
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold mb-4 text-gray-900 dark:text-gray-100;
+}
+h1 { @apply text-4xl sm:text-5xl; }
+h2 { @apply text-3xl sm:text-4xl; }
+h3 { @apply text-2xl; }
+
+/* Paragraphs */
+p {
+  @apply mb-4 text-base text-gray-700 dark:text-gray-300;
+}
+
+/* Anchor styles */
+a {
+  @apply text-blue-600 hover:underline hover:text-blue-800 transition-colors;
+}
+
+/* Buttons (general) */
+button {
+  @apply bg-blue-600 text-white font-medium rounded-lg px-5 py-2.5 hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+/* Cards / Containers */
+.container {
+  @apply max-w-screen-lg mx-auto px-4;
+}
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-2xl shadow-md border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition-all;
+}
+
+/* Utility classes */
+.gradient-text {
+  background: linear-gradient(45deg, rgb(var(--primary-color)), rgb(var(--accent-color)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
