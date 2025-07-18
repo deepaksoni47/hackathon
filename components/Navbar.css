@@ -1,0 +1,93 @@
+/* components/Navbar.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #7f1d1d; /* dark red */
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.desktop-menu {
+  flex-direction: row;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: #60a5fa; /* light blue */
+}
+
+.navbar-login-btn {
+  background-color: #2563eb; /* blue */
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-login-btn:hover {
+  background-color: #1e40af; /* darker blue */
+}
+
+.mobile-menu-button {
+  font-size: 1.5rem;
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .desktop-menu {
+    display: flex;
+  }
+
+  .mobile-menu-button,
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.full-width {
+  width: 100%;
+  text-align: left;
+  margin-top: 0.5rem;
+}

@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main className="min-h-screen flex items-center justify-center px-4">
+        <main className="min-h-screen  px-4">
           <div className="container">{children}</div>
         </main>
       </body>
