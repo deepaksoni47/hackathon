@@ -1,0 +1,49 @@
+.footer-container {
+    margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  width: 100%;
+  background-color: #90992c;
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footer-heading {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.footer-list li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.footer-list li:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-logo-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.footer-social-icons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.footer-social-icons a {
+  color: white;
+  transition: color 0.3s;
+}
+
+.footer-social-icons a:hover {
+  color: #60a5fa; /* Tailwind's blue-400 */
+}
